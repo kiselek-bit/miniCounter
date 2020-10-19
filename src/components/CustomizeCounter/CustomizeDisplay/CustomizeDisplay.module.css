@@ -1,0 +1,31 @@
+.wrapper {
+    background-color: #282c34;
+    border-radius: 7px;
+    padding: 33px 15px;
+    color: #61dafb;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #63DAFC;
+
+}
+
+.value {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.value input {
+    width: 100px;
+    height: 18px;
+    font-size: large;
+    margin: auto 0;
+    border: #61dafb 2px solid;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #61dafb;
+}
+.value span{
+    font-size: larger;
+}
