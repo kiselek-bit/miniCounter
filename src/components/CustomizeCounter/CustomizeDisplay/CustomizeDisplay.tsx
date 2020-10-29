@@ -21,11 +21,11 @@ export function CustomizeDisplay(props: CustomizeDisplayPropsType) {
         props.setMinValue(Number(newMinValue))
     }
 
-    let finalClassNameMinValue = props.minValue < 0 || props.maxValue < props.minValue
+    let finalClassNameMinValue = props.minValue < 0 || props.maxValue <= props.minValue
         ? s.error
         : ''
 
-    let finalClassNameMaxValue = props.maxValue < 0 || props.maxValue < props.minValue
+    let finalClassNameMaxValue = props.maxValue < 0 || props.maxValue <= props.minValue
         ? s.error
         : ''
 

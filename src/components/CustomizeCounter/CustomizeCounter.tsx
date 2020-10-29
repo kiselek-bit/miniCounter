@@ -5,7 +5,6 @@ import {Button} from '../button/Button';
 
 type CustomizeCounterPropsType = {
     count: number
-    maxValue: number
     onClickSetValue: (maxValue: number, minValue: number) => void
 }
 
@@ -18,6 +17,8 @@ export function CustomizeCounter(props: CustomizeCounterPropsType) {
         props.onClickSetValue(maxValue, minValue)
     }
 
+    const disabledSet = minValue < 0 || maxValue <= minValue || maxValue < 0
+
     return (
         <div className='counter'>
             <CustomizeDisplay maxValue={maxValue}
@@ -27,7 +28,7 @@ export function CustomizeCounter(props: CustomizeCounterPropsType) {
             <div className="buttonsBlock">
                 <Button title='set'
                         callback={setValue}
-                        disabled={props.count === props.maxValue}
+                        disabled={disabledSet}
                 ></Button>
             </div>
         </div>

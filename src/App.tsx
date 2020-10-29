@@ -33,7 +33,6 @@ function App() {
       <header className="App-header">
 
           <CustomizeCounter count={count}
-                            maxValue={maxValue}
                             onClickSetValue={onClickSetValue}/>
 
           <Counter count={count}
