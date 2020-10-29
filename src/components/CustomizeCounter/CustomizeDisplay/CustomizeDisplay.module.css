@@ -29,3 +29,7 @@
 .value span{
     font-size: larger;
 }
+
+.error {
+    color: red;
+}

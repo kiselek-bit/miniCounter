@@ -10,9 +10,14 @@ import {CustomizeCounter} from "./components/CustomizeCounter/CustomizeCounter";
 function App() {
 
     let [count, setCount] = useState<number>(0)
+    let [maxValue, setMaxValue] = useState<number>(5)
+    let [minValue, setMinValue] = useState<number>(0)
 
-    const maxValue: number = 5
-    const minValue: number = 0
+    const onClickSetValue = (maxValue: number, minValue: number) => {
+        setMaxValue(maxValue)
+        setMinValue(minValue)
+        setCount(minValue)
+    }
 
     const incCount = () => {
         if (count <  maxValue) {
@@ -29,7 +34,7 @@ function App() {
 
           <CustomizeCounter count={count}
                             maxValue={maxValue}
-                            installCount={() => alert('want install')}/>
+                            onClickSetValue={onClickSetValue}/>
 
           <Counter count={count}
                    maxValue={maxValue}
